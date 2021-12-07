@@ -21,15 +21,18 @@ body {
   color: #fff;
 }
 .container {
-  position: relative;
+  /* position: relative; */
   width: 100%;
   height: 100%;
+  display: flex;
 }
 .split {
-  position: absolute;
+  flex: 0.5;
+  /* position: absolute;
   top: 0;
   width: 50%;
-  height: 100%;
+  height: 100%; */
+  position: relative;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -75,7 +78,8 @@ body {
   background-color: var(--right-btn-hover-color);
 }
 
-.container.left-active .left {
+/* Using position absolute */
+/* .container.left-active .left {
   width: 70%;
 }
 .container.left-active .right {
@@ -86,6 +90,14 @@ body {
 }
 .container.right-active .right {
   width: 70%;
+} */
+
+/* Using flex container */
+.container.left-active .left {
+  flex: 1.3;
+}
+.container.right-active .right {
+  flex: 1.3;
 }
 
 @media (max-width: 860px) {
