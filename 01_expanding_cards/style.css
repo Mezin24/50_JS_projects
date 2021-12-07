@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+.container {
+    display: flex;
+    width: 90vw;
+    max-width: 900px;
+}
+.card {
+    flex: 0.5;
+    height: 80vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 5px;
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+    transition: flex 0.7s ease-in;
+    cursor: pointer;
+}
+.card.active {
+    flex: 5 !important
+}
+.card h3 {
+    opacity: 0;
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    color: #f4f4f4;
+    transition: opacity 0.3s ease-in 0.5s;
+}
+.card.active h3 {
+    opacity: 1;
+}
+
+.card:nth-child(1) {
+    background-image: url('https://images.unsplash.com/photo-1535498730771-e735b998cd64?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80')
+}
+.card:nth-child(2) {
+    background-image: url('https://images.unsplash.com/photo-1543716091-a840c05249ec?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80')
+}
+.card:nth-child(3) {
+    background-image: url('https://images.unsplash.com/photo-1522093007474-d86e9bf7ba6f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80')
+}
+.card:nth-child(4) {
+    background-image: url('https://images.unsplash.com/photo-1511527661048-7fe73d85e9a4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80')
+}
+.card:nth-child(5) {
+    background-image: url('https://images.unsplash.com/photo-1574514366389-3c4fef242ca9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=693&q=80')
+}
+
+@media (max-width: 580px) {
+    .container {
+        width: 100vw;
+    }
+    .card:nth-child(4), .card:nth-child(5) {
+        display: none;
+    }
+}
